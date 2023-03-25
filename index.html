@@ -25,34 +25,45 @@
 </head>
 
 <body>
-    <!-- *** (START) header block -->
-    <header></header>
-    <!-- *** (END) header block -->
-
 
     <!-- *** (START) navbar block -->
-    <nav class="mx-auto">
-        <div class="nav-logo">
+    <nav class="mx-auto py-2">
+        <div class="nav-logo col-md-3 col-sm-6 col-6">
             <a href="">
                 <img src="./images/icon-logo/android-chrome-512x512.png" alt="" />
                 <span>زیبا پوش</span>
             </a>
         </div>
-        <div class="input-group w-50">
-            <input type="text" class="form-control" placeholder="جست و جو" aria-label="Search"
-                aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <span class="input-group-text" id="search-btn">جست و جو</span>
-            </div>
+        <div class="nav-search col-md-6 col-sm-11 col-11">
+            <form action="" method="get" class="d-flex justify-content-center align-items-center" style="gap: 10px;">
+                <input name="q" type="text" class="form-control w-50" placeholder="جست و جو" aria-label="Search"
+                    aria-describedby="basic-addon2">
+                <button class="search-button" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
         </div>
-        <div class="nav-login-cart">
-
+        <div class="nav-login-cart col-md-3 col-sm-8 col-10">
+            <a href="./signup.html">
+                <div class="d-flex align-items-center" style="gap: 5px;">
+                    <i class="bi bi-person-circle"></i>
+                    <span>ثبت نام</span>
+                </div>
+            </a>
+            <a href="./cart.html">
+                <div>
+                    <i class="bi bi-bag"></i>
+                    <span id="nav-cart-quantity">2</span>
+                </div>
+            </a>
         </div>
     </nav>
     <!-- *** (END) navbar block -->
 
     <!-- *** (START) content block -->
-    <main></main>
+    <main class="py-3">
+
+    </main>
     <!-- *** (END) content block -->
 
     <!-- *** (START) footer block -->

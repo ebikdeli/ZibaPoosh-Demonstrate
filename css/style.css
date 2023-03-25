@@ -10,21 +10,25 @@ https://flatuicolors.com/palette/defo
 /* * nav bar section (START) */
 nav{
     position: sticky;
+    top: 2px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: max-content;
+    width: 95%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
+    /* background-color: aqua; */
     /* font-family: "IRAN Sans", sans-serif; */
     font-family: 'Iranian Sans', sans-serif;
 }
 
 .nav-logo{
-    height: 70px;
-    width: auto;
-    font-size: 30px;
+    height: 60px;
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: 5px;
 }
 
 .nav-logo a{
@@ -36,4 +40,44 @@ nav img{
     margin: 0;
     max-height: 100%;
 }
+
+.nav-search input{
+    direction: rtl;
+}
+
+.search-button{
+    /* background-color: aqua; */
+    font-size: 26px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.nav-login-cart{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.nav-login-cart a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-login-cart i{
+    font-size: 24px;
+}
+
+@media only screen and(width <= 766px){
+
+}
 /* * nav bar section (END) */
+
+
+/* * main section (START) */
+main{
+    background-color: aquamarine;
+    height: 100vh;
+}
+/* * main section (END) */
