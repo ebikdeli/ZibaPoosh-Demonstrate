@@ -2,8 +2,13 @@
 https://flatuicolors.com/palette/defo
  */
 :root{
-    --nav-bar-bg-color: '#ecf0f1';
-    --footer-bg-color: '#2c3e50';
+    --nav-bar-bg-color: #ecf0f1;
+    --footer-bg-color: #34495e;
+    --footer-text-color: #ecf0f1;
+}
+
+body{
+    font-family: 'Iranian Sans', sans-serif;
 }
 
 
@@ -12,6 +17,7 @@ nav{
     position: sticky;
     top: 2px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: max-content;
@@ -19,9 +25,11 @@ nav{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: aqua; */
-    /* font-family: "IRAN Sans", sans-serif; */
-    font-family: 'Iranian Sans', sans-serif;
+}
+@media only screen and(width <= 766px){
+    nav{
+        justify-content: center;
+    }
 }
 
 .nav-logo{
@@ -46,7 +54,6 @@ nav img{
 }
 
 .search-button{
-    /* background-color: aqua; */
     font-size: 26px;
     border: 0;
     border-radius: 50%;
@@ -68,16 +75,65 @@ nav img{
 .nav-login-cart i{
     font-size: 24px;
 }
-
-@media only screen and(width <= 766px){
-
-}
 /* * nav bar section (END) */
 
 
+
 /* * main section (START) */
-main{
-    background-color: aquamarine;
+/* background image section (START) */
+.bg-image{
     height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+#bg-image-1{
+    background-image: url(../images/IMAGE-landscape-fill-1.jpg);
+}
+
+#bg-image-2{
+    background-image: url(../images/IMAGE-landscape-fill-3.jpg);
+}
+
+@media only screen and (width <= 765px){
+    .bg-image{
+        background-attachment: scroll;
+        align-items: start;
+        justify-content: center;
+        background-attachment: local;
+        padding-top: 10px;
+    }
+}
+
+.bg-image a{
+    color: rgb(89, 87, 87);
+    text-decoration: none;
+}
+/* background image section (END) */
+
+/* new-product (START) */
+.new-product{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+/* new-product (END) */
 /* * main section (END) */
+
+
+
+/* * footer section (START) */
+footer{
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+/* * footer section (END) */
