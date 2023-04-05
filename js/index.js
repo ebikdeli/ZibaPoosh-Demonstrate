@@ -18,6 +18,7 @@ Array.from(productPrice).forEach(elem => {
 
 // *** Add to cart
 const addCart = document.querySelectorAll('.add-to-cart');
+let cartQuantity = Number(document.querySelector('#nav-cart-quantity').innerText);
 
 Array.from(addCart).forEach(elem => {
     elem.addEventListener('click', e => {
@@ -27,6 +28,14 @@ Array.from(addCart).forEach(elem => {
         let url = '#';
         let errMsg = 'مشکلی در ارسال پیش آمده';
         // Send data to url
-        addToCart(url, data, errMsg)
+        // addToCart(url, data, errMsg)
+        Swal.fire(
+            'تبریک!',
+            'محصول به سبد خرید اضافه شد',
+            'success'
+          )
+        // Update cart-quantity value
+        cartQuantity += 1;
+        document.querySelector('#nav-cart-quantity').innerText = cartQuantity;
     })
 })
