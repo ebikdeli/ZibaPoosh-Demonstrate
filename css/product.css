@@ -60,3 +60,38 @@ input[type='radio']{
 .price-after{
     color: green;
 }
+
+.you-like{
+    display: grid;
+    text-align: center;
+    /* justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.you-like-product{
+    justify-self: center;
+}
+
+.you-like-img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.you-like-name {
+    text-decoration: none;
+    color: black;
+}
+
+.you-like-name:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.you-like-price{
+    color: green;
+}
