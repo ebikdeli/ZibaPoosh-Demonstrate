@@ -7,6 +7,15 @@ localStorage.getItem('cart-quantity') ? localStorage.getItem('cart-quantity') : 
 document.querySelector('#nav-cart-quantity').innerText = localStorage.getItem('cart-quantity');
 
 
+
+// *** Calculate discount percent
+const priceBefore = Number(document.querySelector('.price-before-value').innerText);
+const priceCurrent = Number(document.querySelector('.price-after-value').innerText);
+const discountPercent = ((priceBefore - priceCurrent) / priceBefore) * 100;
+document.querySelector('.discount-value').innerText = discountPercent.toFixed(0);
+
+
+
 // *** Add to Cart index
 const addCart = document.querySelector('.add-to-cart-box');
 // let cartQuantity = Number(document.querySelector('#nav-cart-quantity').innerText);
