@@ -2,6 +2,11 @@ import { addToCart } from "./function.js";
 
 
 
+// *** Get cart quantity from local storage, if there is not any, create it
+localStorage.getItem('cart-quantity') ? localStorage.getItem('cart-quantity') : localStorage.setItem('cart-quantity', 0);
+document.querySelector('#nav-cart-quantity').innerText = localStorage.getItem('cart-quantity');
+
+
 // *** Calculate discount percent for each product
 const productPrice = document.querySelectorAll('.product-price');
 
@@ -18,7 +23,7 @@ Array.from(productPrice).forEach(elem => {
 
 // *** Add to cart
 const addCart = document.querySelectorAll('.add-to-cart');
-let cartQuantity = Number(document.querySelector('#nav-cart-quantity').innerText);
+// let cartQuantity = Number(document.querySelector('#nav-cart-quantity').innerText);
 
 Array.from(addCart).forEach(elem => {
     elem.addEventListener('click', e => {
@@ -36,6 +41,7 @@ Array.from(addCart).forEach(elem => {
           )
         // Update cart-quantity value
         cartQuantity += 1;
-        document.querySelector('#nav-cart-quantity').innerText = cartQuantity;
+        localStorage.setItem('cart-quantity', Number(localStorage.getItem('cart-quantity')) + 1)
+        document.querySelector('#nav-cart-quantity').innerText = localStorage.getItem('cart-quantity');
     })
 })
